@@ -49,7 +49,7 @@ function restore_app {
     [ $quiet -eq 0 ] && \
         echo Restoring $app
 
-    rsync -n ${rsync_args}                                     \
+    rsync ${rsync_args}                                     \
         --files-from="${config_directory}/${app}.conf"      \
         "${backup_directory}/${app}"                        \
         "${library_directory}"
